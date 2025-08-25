@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { Sparkles, Mail, Github, Linkedin, PlayCircle } from "lucide-react";
+import { Sparkles } from "lucide-react";
+import Link from "next/link"; // at the top of the file
 import { ProjectsGrid } from "@/components/projects-grid";
 import { BadgeCloud } from "@/components/badge-cloud";
 import { Section } from "@/components/section";
@@ -19,7 +20,7 @@ export default function HomePage() {
               className="font-display tracking-tight leading-[1.05]"
             >
               {/* First line — smaller & lighter */}
-              <span className="block text-3xl md:text-4xl font-normal mb-3 text-slate-600 dark:text-slate-300">
+              <span className="block text-3xl md:text-4xl font-normal mb-20 text-slate-600 dark:text-slate-300">
                 Hi, I'm Amol Sidhu.
               </span>
 
@@ -29,51 +30,6 @@ export default function HomePage() {
                 with polished UIs.
               </span>
             </motion.h1>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.25, duration: 0.6 }}
-              className="mt-8 flex flex-wrap gap-3"
-            >
-              <a
-                href="mailto:amol@amolsidhu.com"
-                className="btn-shimmer text-white px-5 py-3 rounded-xl font-medium shadow-glow transition"
-              >
-                <div className="flex items-center gap-2">
-                  <Mail className="size-5" />
-                  <span>Get in touch</span>
-                </div>
-              </a>
-              <a
-                href="https://github.com/amolsidhu"
-                target="_blank"
-                className="glass px-4 py-3 rounded-xl hover:shadow-glow transition"
-              >
-                <div className="flex items-center gap-2">
-                  <Github className="size-5" />
-                  <span>GitHub</span>
-                </div>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/amolsidhu"
-                target="_blank"
-                className="glass px-4 py-3 rounded-xl hover:shadow-glow transition"
-              >
-                <div className="flex items-center gap-2">
-                  <Linkedin className="size-5" />
-                  <span>LinkedIn</span>
-                </div>
-              </a>
-              <a
-                href="#projects"
-                className="glass px-4 py-3 rounded-xl hover:shadow-glow transition"
-              >
-                <div className="flex items-center gap-2">
-                  <PlayCircle className="size-5" />
-                  <span>See work</span>
-                </div>
-              </a>
-            </motion.div>
           </div>
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -199,12 +155,12 @@ export default function HomePage() {
           <p className="mt-2 text-slate-600 dark:text-slate-300">
             I love turning ideas into crisp, production-ready interfaces.
           </p>
-          <a
-            href="mailto:amol@amolsidhu.com"
-            className="inline-block mt-6 btn-shimmer text-white px-6 py-3 rounded-xl font-medium shadow-glow"
+          <Link
+            href="/contact"
+            className="inline-block mt-6 btn-shimmer text-white px-6 py-3 rounded-xl font-medium shadow-glow motion-reduce:transition-none"
           >
             Let's talk
-          </a>
+          </Link>
         </div>
       </Section>
     </main>
