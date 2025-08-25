@@ -2,28 +2,18 @@
 import { useState } from "react";
 import { Section } from "@/components/section";
 import { motion } from "framer-motion";
+import { Mail, Copy, CopyCheck, Github, Linkedin, Youtube } from "lucide-react";
 
 export default function ContactPage() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
   const [copied, setCopied] = useState(false);
+  const email = "amol@amolsidhu.com";
+  const linkedIn = "https://www.linkedin.com/in/amolsidhu";
+  const github = "https://github.com/yomolify";
+  const youtube = "https://www.youtube.com/@amolsidhumusic";
 
-  function onSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    const to = "amol@amolsidhu.com";
-    const sub = encodeURIComponent(
-      subject || `Message from ${name || "Visitor"} — amolsidhu.com`
-    );
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\n${message}`
-    );
-    window.location.href = `mailto:${to}?subject=${sub}&body=${body}`;
-  }
   async function copyEmail() {
     try {
-      await navigator.clipboard.writeText("amol@amolsidhu.com");
+      await navigator.clipboard.writeText(email);
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
     } catch {}
@@ -33,83 +23,78 @@ export default function ContactPage() {
     <main className="pt-24">
       <Section
         title="Contact"
-        subtitle="Ready to bring industry-leading experience in full-stack development and DevOps to your organization."
+        subtitle="Ready to bring industry-leading experience in full-stack development and DevOps to your organization?"
       >
-        <motion.form
-          onSubmit={onSubmit}
+        <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="max-w-2xl glass p-6 md:p-8 rounded-2xl space-y-4"
+          className="max-w-xl mx-auto glass p-6 md:p-8 rounded-2xl space-y-6 text-center"
         >
-          <div className="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm mb-1">Your name</label>
-              <input
-                required
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="w-full glass px-3 py-2 rounded-xl outline-none"
-                placeholder="Jane Doe"
-              />
-            </div>
-            <div>
-              <label className="block text-sm mb-1">Your email</label>
-              <input
-                required
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full glass px-3 py-2 rounded-xl outline-none"
-                placeholder="jane@doe.com"
-              />
-            </div>
+          <div className="flex flex-col items-center gap-3">
+            <Mail className="size-6 text-sky-500 dark:text-sky-400" />
+            <p className="font-mono text-lg">{email}</p>
           </div>
-          <div>
-            <label className="block text-sm mb-1">Subject</label>
-            <input
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-              className="w-full glass px-3 py-2 rounded-xl outline-none"
-              placeholder="Let's work together"
-            />
-          </div>
-          <div>
-            <label className="block text-sm mb-1">Message</label>
-            <textarea
-              required
-              rows={6}
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              className="w-full glass px-3 py-2 rounded-xl outline-none"
-              placeholder="Tell me about your requirements..."
-            />
-          </div>
-          <div className="flex flex-wrap gap-3">
-            <button
-              type="submit"
+
+          <div className="flex justify-center gap-3 flex-wrap">
+            <a
+              href={`mailto:${email}`}
               className="btn-shimmer text-white px-5 py-3 rounded-xl font-medium shadow-glow"
             >
-              Open email client
-            </button>
+              Send an Email
+            </a>
             <button
               type="button"
               onClick={copyEmail}
-              className="glass px-4 py-3 rounded-xl"
+              className="glass px-4 py-3 rounded-xl flex items-center gap-2"
             >
-              {copied ? "Copied!" : "Copy my email"}
+              {copied ? (
+                <CopyCheck className="size-4" />
+              ) : (
+                <Copy className="size-4" />
+              )}
+              {copied ? "Copied!" : "Copy email"}
             </button>
+          </div>
+
+          {/* Social row */}
+          <div className="flex items-center justify-center gap-3 pt-2 flex-wrap">
             <a
-              href="mailto:amol@amolsidhu.com"
-              className="glass px-4 py-3 rounded-xl"
+              href={linkedIn}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass px-4 py-2 rounded-xl inline-flex items-center gap-2 hover:shadow-sm"
+              aria-label="Open LinkedIn profile"
             >
-              Or click to email
+              <Linkedin className="size-4" />
+              <span className="text-sm">LinkedIn</span>
+            </a>
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass px-4 py-2 rounded-xl inline-flex items-center gap-2 hover:shadow-sm"
+              aria-label="Open GitHub profile"
+            >
+              <Github className="size-4" />
+              <span className="text-sm">GitHub</span>
+            </a>
+            <a
+              href={youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass px-4 py-2 rounded-xl inline-flex items-center gap-2 hover:shadow-sm text-red-600 dark:text-red-400"
+              aria-label="Open YouTube channel"
+            >
+              <Youtube className="size-4" />
+              <span className="text-sm">YouTube</span>
             </a>
           </div>
+
           <p className="text-xs text-slate-500 dark:text-slate-400">
-            The best solutions start with a conversation.
+            Every great project begins with a simple hello.
           </p>
-        </motion.form>
+        </motion.div>
       </Section>
     </main>
   );
