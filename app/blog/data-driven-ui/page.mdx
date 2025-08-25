@@ -1,0 +1,32 @@
+import { Demo } from "@/components/demo";
+
+export const metadata = {
+  title: "Data-Driven UI with Just JSON",
+  description: "Generate sections and layouts entirely from JSON configs.",
+};
+
+# Data-Driven UI with Just JSON
+
+This one came from laziness, honestly. I didn’t want to hardcode sections, copy-paste props, or touch JSX just to add a new card. So I asked: what if the whole UI was driven by a JSON config?
+
+<Callout type="note">
+  If you’re repeating yourself, you’re probably one `map()` away from freedom.
+</Callout>
+
+## Setup
+
+- Defined a `sections.json` with titles, text, and types.
+- Wrote a renderer that mapped over it into cards.
+- Added optional fields for icons, links, etc.
+
+Now adding a section is literally editing JSON. Want a new feature card? Add an object. No rebuild needed.
+
+## Challenges
+
+The hardest part wasn’t code — it was deciding _how flexible_ the JSON should be. Too rigid, and I’d still need JSX tweaks. Too flexible, and it’s basically a CMS. I aimed for “enough” — just enough keys to cover 80% of my needs.
+
+## Takeaways
+
+This pattern makes your code feel like Lego. It’s modular, fast to iterate, and surprisingly powerful for demos.
+
+<Demo />

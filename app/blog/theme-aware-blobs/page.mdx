@@ -1,0 +1,32 @@
+import { Demo } from "@/components/demo";
+
+export const metadata = {
+  title: "Theme-Aware Blobs for Background Personality",
+  description: "SVG blobs that shift with dark/light mode and scroll speed.",
+};
+
+# Theme-Aware Blobs for Background Personality
+
+Every portfolio site has a “background.” Most are boring gradients. I wanted something alive but not distracting — so I landed on SVG blobs that wiggle, float, and even shift colors when I toggle dark mode.
+
+<Callout type="note">
+  Your background should add personality without pulling focus from the content.
+</Callout>
+
+## Setup
+
+- I grabbed a few blob SVGs from Blobmaker (online generator).
+- Dropped them into `motion.div` with scroll transforms.
+- Applied `currentColor` so they adapt instantly to theme changes.
+
+With a light theme, they’re pastel and airy. In dark mode, they deepen into moody purples and blues. Tiny detail, but it really changes the vibe.
+
+## Challenges
+
+Performance. I noticed flickering when blobs moved too fast, so I throttled their scroll speed and randomized size instead. Also had to balance contrast — blobs that were too dark made text unreadable.
+
+## Takeaways
+
+Little touches like this make a site feel crafted. It’s subtle, but users notice when a site “breathes.”
+
+<Demo />

@@ -1,0 +1,35 @@
+import { Demo } from "@/components/demo";
+
+export const metadata = {
+  title: "Polished Dashboards with Recharts",
+  description:
+    "Responsive Recharts dashboards that highlight interactivity and polish.",
+};
+
+# Polished Dashboards with Recharts
+
+Charts are one of my favorite ways to show product thinking. They immediately communicate scale, momentum, and health. More importantly, they reveal whether you care about **clarity** and **UX**, not just raw data.
+
+<Callout type="note">
+  Good charts are less about data volume and more about *making insights
+  obvious*.
+</Callout>
+
+## Setup
+
+- Built with [Recharts](https://recharts.org/), which gives a clean, modern baseline.
+- Added line and bar series to show growth and comparison.
+- Made it fully responsive — whether you’re on a big monitor or a phone, the charts resize gracefully.
+- Polished with tooltips, labels, and gridlines that strike the right balance between detail and readability.
+
+## Challenges
+
+The hardest part was **design taste** — picking colors, deciding where to show or hide labels, and avoiding clutter. It’s easy to make charts look noisy or “Excel-like.” The trick is restraint: fewer strokes, intentional whitespace, consistent type scale.
+
+I also had to ensure the charts played nicely with dark mode. Recharts doesn’t ship with dark-aware defaults, so I wired up custom theme variables for axis lines and tooltip backgrounds.
+
+## Takeaways
+
+What I love here is how charts showcase **engineering + product sense in one go**. They’re not just functional — they _feel_ like part of a dashboard you’d actually want to use. And when someone interacts with them (hover, resize, toggle), they get that “oh, this is polished” moment.
+
+<Demo />

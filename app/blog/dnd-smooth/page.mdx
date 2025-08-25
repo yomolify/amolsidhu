@@ -1,0 +1,32 @@
+import { Demo } from "@/components/demo";
+
+export const metadata = {
+  title: "Drag & Drop That Just Feels Right",
+  description: "Build a Trello-like board with @dnd-kit and polish the motion.",
+};
+
+# Drag & Drop That Just Feels Right
+
+I’ve built plenty of “demo” drag-and-drops, but they always felt… cheap. The card jumps, the drop zones don’t line up, and the whole thing screams _unfinished_. This time I wanted a board that felt closer to Trello — buttery smooth and satisfying.
+
+<Callout type="note">
+  Drag & drop is one of those UX details you don’t notice until it’s wrong.
+</Callout>
+
+## Setup
+
+- I used `@dnd-kit/core` for sensors and collisions.
+- Wrapped my columns in `SortableContext`.
+- Layered in Framer Motion so items eased into place instead of teleporting.
+
+Once I added spring animations, the whole thing just clicked. Cards didn’t just move — they _glided_.
+
+## Challenges
+
+I kept it simple and stuck with `closestCenter` for collision detection — it felt good enough for this demo, and I didn’t run into anything major that needed tweaking.
+
+## Takeaways
+
+If you want users to _trust_ your UI, polish the details. A smooth drag interaction doesn’t just look good — it makes the whole app feel reliable.
+
+<Demo />

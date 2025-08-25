@@ -1,0 +1,33 @@
+import { Demo } from "@/components/demo";
+
+export const metadata = {
+  title: "Parallax Magic in Framer Motion",
+  description: "Create depth and focus with GPU-friendly parallax layers.",
+};
+
+# Parallax Magic in Framer Motion
+
+When I first started tinkering with scroll effects, everything either felt too subtle (like… why bother) or way too heavy (janky scroll + fans going brrrr). Framer Motion’s `useScroll` and `useTransform` ended up being my sweet spot — smooth on GPU, predictable in code, and honestly fun to play with.
+
+<Callout type="note">
+  Parallax is all about depth. Even tiny offsets make the whole page feel more
+  cinematic.
+</Callout>
+
+## Setup
+
+- Wrap sections in `motion.div`.
+- Use `useScroll` to grab a scroll progress value.
+- Map it into transforms with `useTransform`.
+
+I usually layer 2–3 elements with different speeds. For example, a background image might move at 10%, a mid-layer card at 40%, and a floating headline at 80%. The trick is to keep it consistent — otherwise your user’s eyes get confused instead of guided.
+
+## Challenges
+
+One thing I hit: flickering on fast scrolls. That happened because my transforms were pushing layers outside their container too aggressively. The fix was just to cap the transforms within a reasonable range and avoid using box-shadows on GPU-transformed elements (shadows don’t always play nice).
+
+## Takeaways
+
+This effect feels like a cheap cheat code: minimal code, big payoff. It’s now a recurring motif in my builds — scroll, reveal, depth, done.
+
+<Demo />

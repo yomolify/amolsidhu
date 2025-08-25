@@ -1,0 +1,32 @@
+import { Demo } from "@/components/demo";
+
+export const metadata = {
+  title: "Export Components to PNG with Style",
+  description: "Let users snapshot charts, dashboards, or cards beautifully.",
+};
+
+# Export Components to PNG with Style
+
+This was one of those “small feature, big wow” moments. I added an export button to my charts, and suddenly everyone thought it was a “real product.” People love pressing buttons that give them files.
+
+<Callout type="note">
+  Exporting makes your demo feel less like a toy and more like a tool.
+</Callout>
+
+## Setup
+
+- Used `html2canvas` to screenshot a `ref`.
+- Converted the canvas to a PNG blob.
+- Triggered download with a simple anchor click.
+
+Took maybe 15 minutes, but the perceived value? Way higher.
+
+## Challenges
+
+Light mode exports were a bit dim. I fixed it by forcing a white background layer during rendering. Small thing, big difference.
+
+## Takeaways
+
+If you’re demoing data, add an export button. It’s a credibility multiplier — users immediately see it as shareable, useful, and legit.
+
+<Demo />
