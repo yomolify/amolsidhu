@@ -32,9 +32,9 @@ export default function BlogIndex() {
     );
   }
   return (
-    <div className="pt-24">
+    <div className=" ">
       <Section
-        title="Blog"
+        title="Search"
         subtitle="Filter by tag or search titles and summaries."
       >
         <div className="glass p-4 rounded-2xl mb-6">

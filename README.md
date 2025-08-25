@@ -5,9 +5,8 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6)](#)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.x-38bdf8)](#)
 [![Framer Motion](https://img.shields.io/badge/Framer%20Motion-animations-blueviolet)](#)
-[![pnpm](https://img.shields.io/badge/pnpm-8.x-f69220)](#)
+[![pnpm](https://img.shields.io/badge/pnpm-10.x-f69220)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
 [![Deployment](https://deploy-badge.vercel.app/vercel/YOUR_VERCEL_PROJECT_NAME)](https://YOUR_DOMAIN_OR_VERCEL_URL)
 
 ---

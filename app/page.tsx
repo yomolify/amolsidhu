@@ -101,19 +101,25 @@ export default function HomePage() {
                     <span className="text-sky-600">function</span>{" "}
                     <span className="text-emerald-600">Shine</span>() {"{"}
                   </div>
-                  <div className="pl-4">
-                    // tiny component with motion + glass
+                  <div className="pl-4 text-slate-500">
+                    // Software doesn’t sparkle by accident, we make it sparkle
+                    ✨
+                  </div>
+                  <div className="pl-4 text-slate-500">
+                    // Move fast, stay resilient, ship frequent 🚀
                   </div>
                   <div className="pl-4">
                     <span className="text-sky-600">return</span> (
                   </div>
-                  <div className="pl-6">{`<div className="glass rounded-2xl p-4 flex items-center gap-3">`}</div>
+                  <div className="pl-6">{`<div className="glass rounded-2xl p-4 flex items-center">`}</div>
                   <div className="pl-8">
                     {`<Sparkles className="size-4" />`}{" "}
-                    <span className="text-slate-500">{`Shiny, fast, and accessible`}</span>
+                  </div>
+                  <div className="pl-8">
+                    <span className="text-slate-500">{`{/* TODO: automate the boring stuff, celebrate the wins */}`}</span>
                   </div>
                   <div className="pl-6">{`</div>`}</div>
-                  <div className="pl-4">)</div>
+                  <div className="pl-4">);</div>
                   <div>{"}"}</div>
                 </div>
               </div>
@@ -178,7 +184,7 @@ export default function HomePage() {
       <Section
         id="projects"
         title="Selected Work"
-        subtitle="Polished UI demos with smooth motion and zero backend."
+        subtitle="Building end-to-end software that solves business bottlenecks with clean design and reliable engineering."
       >
         <ProjectsGrid />
       </Section>

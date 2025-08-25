@@ -213,7 +213,7 @@ export default function ParallaxPage() {
                 {[
                   {
                     title: "Normal flow",
-                    desc: "This card scrolls with the page.",
+                    desc: "Scrolls until it reaches the sticky header.",
                   },
                   {
                     title: "Depth cue",
@@ -250,7 +250,7 @@ export default function ParallaxPage() {
         />
       </div>
 
-      <Section className="pb-20">
+      <Section>
         <div className="glass p-8 rounded-2xl">
           <h3 className="text-2xl font-display">Implementation details</h3>
           <p className="mt-2 text-slate-600 dark:text-slate-300">

@@ -1,18 +1,20 @@
 "use client";
 import { motion } from "framer-motion";
 const badges = [
-  "Next.js",
-  "TypeScript",
-  "Tailwind",
-  "Framer Motion",
-  "React 18",
-  "App Router",
-  "Vercel",
-  "Edge-ready",
-  "Dark Mode",
-  "Animations",
-  "Accessibility",
-  "SEO",
+  "Fullstack",
+  "Node.js",
+  "React",
+  "GraphQL",
+  "Typescript",
+  "SRE",
+  "CI/CD",
+  "IaC",
+  "AWS",
+  "Docker",
+  "Terraform",
+  "Golang",
+  "Python",
+  "PostgreSQL",
 ];
 export function BadgeCloud() {
   return (
