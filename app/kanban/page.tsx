@@ -205,6 +205,7 @@ export default function KanbanPage() {
     let toCol: ColumnKey | null = null;
     let toIndex: number | null = null;
 
+    if (!over?.data?.current) return;
     if (overType === "column") {
       toCol = over.data.current.columnId as ColumnKey;
       toIndex = board[toCol].length;
