@@ -7,7 +7,7 @@
 [![Framer Motion](https://img.shields.io/badge/Framer%20Motion-animations-blueviolet)](#)
 [![pnpm](https://img.shields.io/badge/pnpm-10.x-f69220)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Deployment](https://deploy-badge.vercel.app/vercel/YOUR_VERCEL_PROJECT_NAME)](https://YOUR_DOMAIN_OR_VERCEL_URL)
+[![Deployment](https://deploy-badge.vercel.app/vercel/amolsidhu)](https://amolsidhu.com)
 
 ---
 
