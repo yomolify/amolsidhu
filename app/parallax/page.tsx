@@ -40,7 +40,7 @@ export default function ParallaxPage() {
       />
       <div className="relative h-[200vh] overflow-clip">
         {/* THEME-AWARE, FLICKER-RESISTANT BLOBS */}
-        {/* TIP: wrapper handles blur + transform; child handles gradient + blend.
+        {/* Wrapper handles blur + transform; child handles gradient + blend.
            This avoids combining heavy filter + blend on the same painted layer. */}
 
         {/* 1 — gigantic, glacial */}

@@ -1,4 +1,3 @@
-// src/components/illustrations/BlogArt.tsx
 export default function BlogArt({ className = "" }: { className?: string }) {
   return (
     <svg

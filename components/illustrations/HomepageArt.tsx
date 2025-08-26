@@ -1,4 +1,3 @@
-// src/components/illustrations/HomepageArt.tsx
 export default function HomepageArt({
   className = "",
 }: {

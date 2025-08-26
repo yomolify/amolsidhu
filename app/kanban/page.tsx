@@ -170,7 +170,6 @@ export default function KanbanPage() {
   const [board, setBoard] = useLocalBoard();
   const [activeCardId, setActiveCardId] = useState<string | null>(null);
 
-  // ✅ Client-only gate to avoid hydration ID mismatches from @dnd-kit
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
